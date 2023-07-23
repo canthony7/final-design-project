@@ -1,0 +1,6 @@
+# 项目排除路径
+/project-common/target/
+/project-goods/target/
+/project-login/target/
+/project-management/target/
+/project-system/target/

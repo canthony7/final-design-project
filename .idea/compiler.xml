@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="project-login" />
+        <module name="project-management" />
+        <module name="project-goods" />
+        <module name="project-system" />
+        <module name="project-chat" />
+        <module name="project-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="parent-project" options="" />
+      <module name="project-chat" options="-parameters" />
+      <module name="project-common" options="-parameters" />
+      <module name="project-goods" options="-parameters" />
+      <module name="project-login" options="-parameters" />
+      <module name="project-management" options="-parameters" />
+      <module name="project-system" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/ProjectDto.java" afterDir="false" />
+    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v2">
+      <change afterPath="$PROJECT_DIR$/project-common/src/main/java/com/crud/utils/DateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-common/src/main/java/com/crud/configuration/CorsConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project-common/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/filter/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/filter/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/pojo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/TypeDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/ProjectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/ProjectDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-system/src/main/java/com/crud/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-system/src/main/java/com/crud/controller/SystemController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +90,7 @@
       <recent name="com.crud" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SystemApplication">
+  <component name="RunManager" selected="Spring Boot.ManagementApplication">
     <configuration name="ManagementTest.Test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-management" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,21 +101,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagementTest.Test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-management" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ManagementTest" />
-      <option name="METHOD_NAME" value="Test04" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ManagementTest.Test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-management" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ManagementTest" />
       <option name="METHOD_NAME" value="Test05" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagementTest.Test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-management" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ManagementTest" />
+      <option name="METHOD_NAME" value="Test06" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,19 +162,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ManagementTest.Test06" />
       <item itemvalue="JUnit.ManagementTest.Test03" />
-      <item itemvalue="JUnit.ManagementTest.Test04" />
       <item itemvalue="JUnit.ManagementTest.Test05" />
       <item itemvalue="Spring Boot.SystemApplication" />
       <item itemvalue="Spring Boot.ManagementApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="Spring Boot.ManagementApplication" />
+        <item itemvalue="JUnit.ManagementTest.Test06" />
+        <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="JUnit.ManagementTest.Test05" />
         <item itemvalue="JUnit.ManagementTest.Test03" />
-        <item itemvalue="JUnit.ManagementTest.Test04" />
       </list>
     </recent_temporary>
   </component>
@@ -212,8 +208,16 @@
       <workItem from="1689940921609" duration="10931000" />
       <workItem from="1690112495355" duration="1804000" />
       <workItem from="1690124579111" duration="9712000" />
-      <workItem from="1690248052775" duration="385000" />
+      <workItem from="1690248052775" duration="9891000" />
     </task>
+    <task id="LOCAL-00001" summary="v2">
+      <created>1690248458726</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690248458726</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +234,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -239,5 +247,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.Double" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -1,15 +1,21 @@
 import com.crud.management.ManagementApplication;
 import com.crud.management.pojo.Fee;
+import com.crud.management.pojo.Project;
 import com.crud.management.repository.FeeRepository;
+import com.crud.management.repository.ProjectRepository;
 import com.crud.management.service.DealerService;
 import com.crud.management.service.FeeService;
 import com.crud.management.service.ProjectService;
+import com.crud.utils.DateUtils;
 import com.crud.vo.ResponseBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import javax.annotation.Resource;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootTest(classes = ManagementApplication.class)
 public class ManagementTest {
@@ -25,6 +31,9 @@ public class ManagementTest {
 
     @Resource
     ProjectService projectService;
+
+    @Resource
+    ProjectRepository projectRepository;
 
     @Test
     void Test01(){
@@ -61,6 +70,11 @@ public class ManagementTest {
     void Test05(){
         ResponseBean dealer = feeService.findFeeByDealer(1L);
         System.out.println(dealer);
+    }
+
+    @Test
+    void Test06(){
+        feeService.saveFee("推广费", 160D, null);
     }
 
 }

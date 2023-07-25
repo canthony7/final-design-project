@@ -52,6 +52,4 @@ public class FeeController {
         return feeService.findFeeByProject(id);
     }
 
-
-
 }

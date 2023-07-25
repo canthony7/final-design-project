@@ -28,7 +28,4 @@ public class ProjectController {
     public ResponseBean addNewProject(@RequestBody ProjectDto projectDto){
         return projectService.addNewProject(projectDto);
     }
-
-
-
 }

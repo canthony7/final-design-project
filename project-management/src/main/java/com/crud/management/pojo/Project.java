@@ -52,7 +52,7 @@ public class Project {
     private String college;
 
     @Column(name = "status")
-    @ApiModelProperty(value = "订单状态，默认为未完成")
+    @ApiModelProperty(value = "订单状态，默认为进行中")
     private String status;
 
     @Column(name = "front_developer")

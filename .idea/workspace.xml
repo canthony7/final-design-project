@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v2">
-      <change afterPath="$PROJECT_DIR$/project-common/src/main/java/com/crud/utils/DateUtils.java" afterDir="false" />
+    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v3">
+      <change afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project-common/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/ProjectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/ProjectDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-system/src/main/java/com/crud/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-system/src/main/java/com/crud/controller/SystemController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,8 +166,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ManagementApplication" />
-        <item itemvalue="JUnit.ManagementTest.Test06" />
         <item itemvalue="Spring Boot.SystemApplication" />
+        <item itemvalue="JUnit.ManagementTest.Test06" />
         <item itemvalue="JUnit.ManagementTest.Test05" />
         <item itemvalue="JUnit.ManagementTest.Test03" />
       </list>
@@ -208,7 +203,9 @@
       <workItem from="1689940921609" duration="10931000" />
       <workItem from="1690112495355" duration="1804000" />
       <workItem from="1690124579111" duration="9712000" />
-      <workItem from="1690248052775" duration="9891000" />
+      <workItem from="1690248052775" duration="12158000" />
+      <workItem from="1690268413665" duration="502000" />
+      <workItem from="1690270898683" duration="5045000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1690248458726</created>
@@ -217,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690248458726</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v3">
+      <created>1690265505159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690265505159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +240,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+    <MESSAGE value="v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

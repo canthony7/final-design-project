@@ -1,6 +1,7 @@
 package com.crud.management.service.impl;
 
 import com.crud.management.dto.ProjectDto;
+import com.crud.management.dto.StatusDto;
 import com.crud.management.pojo.Dealer;
 import com.crud.management.pojo.Project;
 import com.crud.management.repository.DealerRepository;
@@ -77,5 +78,21 @@ public class ProjectServiceImpl implements ProjectService {
             feeService.saveFee("收入", projectDto.getProjectFee(), insertedProject.getId());
         }
         return ResponseBean.success();
+    }
+
+    @Override
+    public ResponseBean updateProjectStatus(StatusDto statusDto) {
+        Long projectId = statusDto.getId();
+        String status = statusDto.getStatus();
+        Optional<Project> optionalProject = projectRepository.findById(projectId);
+        // 如果有这个项目
+        if (optionalProject.isPresent()){
+            Project project = optionalProject.get();
+            project.setStatus(status);
+            projectRepository.save(project);
+            return ResponseBean.success();
+        } else {
+            return ResponseBean.fail(ResponseEnum.EMPTY_ERROR);
+        }
     }
 }

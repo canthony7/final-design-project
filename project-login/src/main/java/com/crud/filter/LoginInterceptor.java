@@ -21,6 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("开始拦截.................");
         Cookie cookie = CookieUtils.getCookie(request, "userTicket");
+        System.out.println(cookie);
         if (cookie == null){
             return false;
         }

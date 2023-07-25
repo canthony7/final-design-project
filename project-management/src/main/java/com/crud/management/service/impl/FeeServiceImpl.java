@@ -5,16 +5,14 @@ import com.crud.management.pojo.Project;
 import com.crud.management.repository.FeeRepository;
 import com.crud.management.repository.ProjectRepository;
 import com.crud.management.service.FeeService;
+import com.crud.utils.DateUtils;
 import com.crud.vo.ResponseBean;
 import com.crud.vo.ResponseEnum;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -101,6 +99,23 @@ public class FeeServiceImpl implements FeeService {
             projectList.add(project);
         }
         return ResponseBean.success(projectList, projectList.size());
+    }
+
+    @Override
+    public ResponseBean saveFee(String feeType, Double feeNumber, Long projectId) {
+        Fee fee = new Fee();
+        fee.setFeeType(feeType);
+        fee.setFee(feeNumber);
+        fee.setCreateTime(DateUtils.getNowLocalDate());
+        if (projectId != null){
+            Optional<Project> optionalProject = projectRepository.findById(projectId);
+            if (optionalProject.isPresent()){
+                Project project = optionalProject.get();
+                fee.setProject(project);
+            }
+        }
+        feeRepository.save(fee);
+        return ResponseBean.success();
     }
 
     public Map<String, Object> TotalFeeAndList(List<Fee> list){

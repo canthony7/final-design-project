@@ -34,5 +34,7 @@ public class User {
     @Column(name = "type")
     private String type;
 
+    private String userTicket;
+
 
 }

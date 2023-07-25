@@ -27,11 +27,11 @@ public class Project {
     private String projectName;
 
     @Column(name = "order_time")
-    @ApiModelProperty(value = "下单时间")
+    @ApiModelProperty(value = "下单时间, 得到当前时间")
     private LocalDate orderTime;
 
     @Column(name = "finished_time")
-    @ApiModelProperty(value = "完成时间")
+    @ApiModelProperty(value = "完成时间, 改变状态为'已完成'的时候修改")
     private LocalDate finishedTime;
 
     @Column(name = "frontend")
@@ -52,7 +52,7 @@ public class Project {
     private String college;
 
     @Column(name = "status")
-    @ApiModelProperty(value = "订单状态")
+    @ApiModelProperty(value = "订单状态，默认为未完成")
     private String status;
 
     @Column(name = "front_developer")

@@ -4,6 +4,7 @@ import com.crud.utils.CookieUtils;
 import com.crud.vo.ResponseBean;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.Element;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,8 @@ import java.util.Map;
  * @description
  */
 @RestController
+@RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class SystemController {
 
     @Resource

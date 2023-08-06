@@ -3,8 +3,10 @@ package com.crud.management.service.impl;
 import com.crud.management.dto.ProjectDto;
 import com.crud.management.dto.StatusDto;
 import com.crud.management.pojo.Dealer;
+import com.crud.management.pojo.Fee;
 import com.crud.management.pojo.Project;
 import com.crud.management.repository.DealerRepository;
+import com.crud.management.repository.FeeRepository;
 import com.crud.management.repository.ProjectRepository;
 import com.crud.management.service.FeeService;
 import com.crud.management.service.ProjectService;
@@ -29,6 +31,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Resource
     FeeService feeService;
 
+    @Resource
+    FeeRepository feeRepository;
 
     @Override
     public ResponseBean findAllProjects() {
@@ -93,6 +97,23 @@ public class ProjectServiceImpl implements ProjectService {
             return ResponseBean.success();
         } else {
             return ResponseBean.fail(ResponseEnum.EMPTY_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseBean deleteProject(Long id) {
+        if (id == null){
+            return ResponseBean.fail(ResponseEnum.DELETE_ERROR);
+        }
+        Optional<Project> optionalProject = projectRepository.findById(id);
+        if (optionalProject.isEmpty()){
+            return ResponseBean.fail(ResponseEnum.DELETE_ERROR);
+        } else {
+            Project project = optionalProject.get();
+            List<Fee> fees = feeRepository.findByProject_Id(project.getId());
+            feeRepository.deleteAllInBatch(fees);
+            projectRepository.deleteById(project.getId());
+            return ResponseBean.success();
         }
     }
 }

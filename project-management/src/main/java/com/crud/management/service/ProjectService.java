@@ -12,4 +12,6 @@ public interface ProjectService {
 
     ResponseBean updateProjectStatus(StatusDto statusDto);
 
+    ResponseBean deleteProject(Long id);
+
 }

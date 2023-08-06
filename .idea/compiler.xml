@@ -15,6 +15,9 @@
         <module name="project-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="project-hello" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -22,6 +25,7 @@
       <module name="project-chat" options="-parameters" />
       <module name="project-common" options="-parameters" />
       <module name="project-goods" options="-parameters" />
+      <module name="project-hello" options="-parameters" />
       <module name="project-login" options="-parameters" />
       <module name="project-management" options="-parameters" />
       <module name="project-system" options="-parameters" />

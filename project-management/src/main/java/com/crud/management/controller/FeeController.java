@@ -1,5 +1,6 @@
 package com.crud.management.controller;
 
+import com.crud.management.dto.FeeDto;
 import com.crud.management.service.FeeService;
 import com.crud.vo.ResponseBean;
 import io.swagger.annotations.Api;
@@ -11,7 +12,7 @@ import javax.annotation.Resource;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/api/fee")
+@RequestMapping("/fee")
 @CrossOrigin(origins = "*")
 @Api(value = "账单接口", tags = "账单资源相关操作")
 public class FeeController {
@@ -50,6 +51,12 @@ public class FeeController {
     @ApiOperation(value = "查询某个项目的所有开销，并返回这个项目净赚多少钱")
     public ResponseBean findFeeByProject(@PathVariable Long id){
         return feeService.findFeeByProject(id);
+    }
+
+    @PostMapping
+    @ApiOperation(value = "插入一条费用信息")
+    public ResponseBean insertFee(FeeDto feeDto){
+        return feeService.insertFee(feeDto);
     }
 
 }

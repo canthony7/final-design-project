@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/api/project")
+@RequestMapping("/project")
 @Api(value = "项目接口", tags = "项目资源相关操作")
 public class ProjectController {
 
@@ -34,5 +34,11 @@ public class ProjectController {
     @ApiOperation(value = "更新项目的状态")
     public ResponseBean updateProjectStatus(@RequestBody StatusDto statusDto){
         return projectService.updateProjectStatus(statusDto);
+    }
+
+    @DeleteMapping("{id}")
+    @ApiOperation(value = "删除一个项目")
+    public ResponseBean deleteProject(@PathVariable Long id){
+        return projectService.deleteProject(id);
     }
 }

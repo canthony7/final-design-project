@@ -6,6 +6,8 @@ import com.crud.management.service.DealerService;
 import com.crud.utils.RandomNumberUtils;
 import com.crud.vo.ResponseBean;
 import com.crud.vo.ResponseEnum;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -67,6 +69,18 @@ public class DealerServiceImpl implements DealerService {
             return ResponseBean.success();
         } else {
             return ResponseBean.fail(ResponseEnum.EMPTY_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseBean findAll(Pageable pageable) {
+        Page<Dealer> dealerPage = dealerRepository.findDealerByEnable(pageable, IS_ENABLED);
+        List<Dealer> dealers = dealerPage.getContent();
+        int totalElements = (int) dealerPage.getTotalElements();
+        if (dealers.size() == 0){
+            return ResponseBean.fail(ResponseEnum.EMPTY_ERROR);
+        } else {
+            return ResponseBean.success(dealers, totalElements);
         }
     }
 }

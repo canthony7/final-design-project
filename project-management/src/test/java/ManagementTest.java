@@ -1,6 +1,8 @@
 import com.crud.management.ManagementApplication;
+import com.crud.management.pojo.Dealer;
 import com.crud.management.pojo.Fee;
 import com.crud.management.pojo.Project;
+import com.crud.management.repository.DealerRepository;
 import com.crud.management.repository.FeeRepository;
 import com.crud.management.repository.ProjectRepository;
 import com.crud.management.service.DealerService;
@@ -10,7 +12,11 @@ import com.crud.utils.DateUtils;
 import com.crud.vo.ResponseBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+
 import javax.annotation.Resource;
+import java.awt.print.Pageable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -34,6 +40,9 @@ public class ManagementTest {
 
     @Resource
     ProjectRepository projectRepository;
+
+    @Resource
+    DealerRepository dealerRepository;
 
     @Test
     void Test01(){
@@ -74,7 +83,26 @@ public class ManagementTest {
 
     @Test
     void Test06(){
-        feeService.saveFee("推广费", 160D, null);
+        Optional<Project> optionalProject = projectRepository.findById(1L);
+        if (optionalProject.isPresent()){
+            Project project = optionalProject.get();
+            System.out.println(project);
+        }
+    }
+
+    @Test
+    void Test07(){
+        PageRequest pageRequest = PageRequest.of(0, 3);
+        Page<Dealer> dealerList1 = dealerRepository.findDealerByEnable(pageRequest, 1);
+        List<Dealer> dealerList = dealerList1.getContent();
+        for (Dealer dealer : dealerList) {
+            System.out.println(dealer);
+        }
+    }
+
+    @Test
+    void Test08(){
+        ResponseBean result = feeService.findFeeByProject(2L);
     }
 
 }

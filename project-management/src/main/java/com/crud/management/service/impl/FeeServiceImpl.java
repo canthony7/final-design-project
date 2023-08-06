@@ -1,5 +1,6 @@
 package com.crud.management.service.impl;
 
+import com.crud.management.dto.FeeDto;
 import com.crud.management.pojo.Fee;
 import com.crud.management.pojo.Project;
 import com.crud.management.repository.FeeRepository;
@@ -114,6 +115,16 @@ public class FeeServiceImpl implements FeeService {
                 fee.setProject(project);
             }
         }
+        feeRepository.save(fee);
+        return ResponseBean.success();
+    }
+
+    @Override
+    public ResponseBean insertFee(FeeDto feeDto) {
+        Fee fee = new Fee();
+        fee.setFeeType(feeDto.getFeeType());
+        fee.setFee(feeDto.getFee());
+        fee.setCreateTime(DateUtils.getNowLocalDate());
         feeRepository.save(fee);
         return ResponseBean.success();
     }

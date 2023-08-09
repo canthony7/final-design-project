@@ -22,4 +22,7 @@ public interface FeeService {
     ResponseBean saveFee(String feeType, Double feeNumber, Long projectId);
 
     ResponseBean insertFee(FeeDto feeDto);
+
+    ResponseBean insertAdditionalFee(FeeDto feeDto);
+
 }

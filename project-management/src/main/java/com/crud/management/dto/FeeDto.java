@@ -15,4 +15,7 @@ public class FeeDto {
     @ApiModelProperty(value = "费用")
     private Double fee;
 
+    @ApiModelProperty(value = "项目id")
+    private Long projectId;
+
 }

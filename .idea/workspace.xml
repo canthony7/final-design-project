@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v4">
-      <change afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/FeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-common/src/main/java/com/crud/vo/ResponseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-common/src/main/java/com/crud/vo/ResponseEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-login/src/main/java/com/crud/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/DealerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Fee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/repository/DealerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/repository/DealerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/DealerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/DealerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/FeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/FeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/DealerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/DealerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-system/src/test/java/com/crud/SystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-system/src/test/java/com/crud/SystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +230,8 @@
       <workItem from="1690878023815" duration="764000" />
       <workItem from="1690940213794" duration="13000" />
       <workItem from="1690966834828" duration="7166000" />
-      <workItem from="1691288966822" duration="2678000" />
+      <workItem from="1691288966822" duration="4859000" />
+      <workItem from="1691297550650" duration="4302000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1690248458726</created>
@@ -267,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690293135481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v5">
+      <created>1691291846867</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691291846867</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +282,8 @@
     <MESSAGE value="v2" />
     <MESSAGE value="v3" />
     <MESSAGE value="v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="v4" />
+    <MESSAGE value="v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

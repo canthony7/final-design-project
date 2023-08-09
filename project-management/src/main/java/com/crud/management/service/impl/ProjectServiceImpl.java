@@ -65,15 +65,15 @@ public class ProjectServiceImpl implements ProjectService {
                 dealer = dealerOptional.get();
                 Double feeRate = dealer.getFeeRate();
                 project.setDealer(dealer);
-                Double dealerFee = feeRate * projectDto.getProjectFee();
                 // 插入项目信息
                 Project insertedProject = projectRepository.save(project);
                 // 将项目收入插入到fee table
                 feeService.saveFee("收入", projectDto.getProjectFee(), insertedProject.getId());
                 // 计算代理费用插入到fee table
+                Double dealerFee = feeRate * projectDto.getProjectFee();
                 feeService.saveFee("代理费", dealerFee, insertedProject.getId());
                 // 更新代理的费率
-                dealer.setFeeRate(feeRate + 0.01D);
+                // dealer.setFeeRate(feeRate + 0.01D);
                 dealerRepository.save(dealer);
             }
         } else {
@@ -88,11 +88,19 @@ public class ProjectServiceImpl implements ProjectService {
     public ResponseBean updateProjectStatus(StatusDto statusDto) {
         Long projectId = statusDto.getId();
         String status = statusDto.getStatus();
+        Optional<Dealer> optionalDealer = dealerRepository.findById(statusDto.getDealerId());
+        Dealer dealer = optionalDealer.get();
+        Double feeRate = dealer.getFeeRate();
         Optional<Project> optionalProject = projectRepository.findById(projectId);
         // 如果有这个项目
         if (optionalProject.isPresent()){
             Project project = optionalProject.get();
             project.setStatus(status);
+            if (status.equals("已完成")){
+                // 更新代理的费率
+                dealer.setFeeRate(feeRate + 0.01D);
+                dealerRepository.save(dealer);
+            }
             projectRepository.save(project);
             return ResponseBean.success();
         } else {

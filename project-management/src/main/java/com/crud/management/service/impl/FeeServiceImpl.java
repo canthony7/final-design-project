@@ -129,6 +129,30 @@ public class FeeServiceImpl implements FeeService {
         return ResponseBean.success();
     }
 
+    // 插入额外的功能费以及代理费
+    @Override
+    public ResponseBean insertAdditionalFee(FeeDto feeDto) {
+        Long projectId = feeDto.getProjectId();
+        Optional<Project> optionalProject = projectRepository.findById(projectId);
+        if (optionalProject.isEmpty()){
+            return ResponseBean.fail(ResponseEnum.INSERT_ERROR);
+        }
+        // 1 插入功能收入
+        Fee functionFee = new Fee();
+        functionFee.setFeeType(feeDto.getFeeType());
+        functionFee.setProject(optionalProject.get());
+        functionFee.setCreateTime(DateUtils.getNowLocalDate());
+        feeRepository.save(functionFee);
+
+        // 2 插入代理费用
+        Fee dealerFee = new Fee();
+        functionFee.setFeeType("代理费");
+        functionFee.setProject(optionalProject.get());
+        functionFee.setCreateTime(DateUtils.getNowLocalDate());
+        feeRepository.save(functionFee);
+        return ResponseBean.success();
+    }
+
     public Map<String, Object> TotalFeeAndList(List<Fee> list){
         double totalFee = 0;
         for (Fee fee : list) {

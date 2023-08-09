@@ -54,9 +54,14 @@ public class FeeController {
     }
 
     @PostMapping
-    @ApiOperation(value = "插入一条费用信息")
+    @ApiOperation(value = "插入一条费用信息，如果projectId为空则是普通费用；如果不为空则是客户后期增加功能")
     public ResponseBean insertFee(FeeDto feeDto){
-        return feeService.insertFee(feeDto);
+        if (feeDto.getProjectId() == null){
+            return feeService.insertFee(feeDto);
+        } else {
+            return feeService.insertAdditionalFee(feeDto);
+        }
+
     }
 
 }

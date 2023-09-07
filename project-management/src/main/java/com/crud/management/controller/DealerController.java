@@ -23,7 +23,7 @@ public class DealerController {
     @GetMapping("/{currentPage}/{pageSize}")
     @ApiOperation(value = "查询所有代理")
     public ResponseBean findAllDealer(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
-        Pageable pageable = PageRequest.of(currentPage, pageSize);
+        Pageable pageable = PageRequest.of(currentPage-1, pageSize);
         return dealerService.findAll(pageable);
     }
 

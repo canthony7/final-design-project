@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="project-common" />
         <module name="project-login" />
         <module name="project-management" />
-        <module name="project-goods" />
-        <module name="project-system" />
-        <module name="project-chat" />
-        <module name="project-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="project-chat" target="11" />
+      <module name="project-goods" target="11" />
       <module name="project-hello" target="11" />
+      <module name="project-system" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

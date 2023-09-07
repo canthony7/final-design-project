@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v5">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/FeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/FeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/FeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/FeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/FeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-chat/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-chat/src/main/java/com/crud/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-chat/src/main/java/com/crud/pojo/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-chat/src/main/java/com/crud/pojo/ServerMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-chat/src/main/java/com/crud/utils/MessageUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-common/src/main/resources/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/controller/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/controller/GoodsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/pojo/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/pojo/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/repository/GoodsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/service/GoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/service/impl/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-goods/src/main/java/com/crud/service/impl/GoodsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/controller/DealerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-system/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-system/src/main/java/com/crud/SystemApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-system/src/main/java/com/crud/controller/SystemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-system/src/test/java/com/crud/SystemTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +69,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="2RFAVIoxeE6fkuCOhi1y5ELHqHE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -65,16 +89,17 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/luohongwei/IdeaProjects/parent-project/project-common/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/luohongwei/IdeaProjects/fee_management/project-management/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;76dcbec6642b08fd8aff3bc3af353c7c&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;190a22a01f46b6bb73fea957dafa94c5&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project-management/src/main/resources" />
       <recent name="$PROJECT_DIR$/project-common/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -232,6 +257,15 @@
       <workItem from="1690966834828" duration="7166000" />
       <workItem from="1691288966822" duration="4859000" />
       <workItem from="1691297550650" duration="4302000" />
+      <workItem from="1691559957463" duration="1553000" />
+      <workItem from="1691646411492" duration="950000" />
+      <workItem from="1691673419994" duration="4680000" />
+      <workItem from="1691852199787" duration="2033000" />
+      <workItem from="1691930383937" duration="17000" />
+      <workItem from="1691990377494" duration="23000" />
+      <workItem from="1692775811115" duration="60000" />
+      <workItem from="1693409277470" duration="706000" />
+      <workItem from="1693987675608" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1690248458726</created>

@@ -103,6 +103,8 @@ public class ManagementTest {
     @Test
     void Test08(){
         ResponseBean result = feeService.findFeeByProject(2L);
+        Object data = result.getData();
+        System.out.println(data.toString());
     }
 
 }

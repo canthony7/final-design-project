@@ -22,7 +22,7 @@ public class Fee {
     @ApiModelProperty(value = "账单表主键")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "project_id", referencedColumnName = "id")
     private Project project;
 

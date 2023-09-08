@@ -14,7 +14,4 @@ public class StatusDto {
     @ApiModelProperty(value = "状态", required = true)
     private String status;
 
-    @ApiModelProperty(value = "代理id", required = false)
-    private Long dealerId;
-
 }

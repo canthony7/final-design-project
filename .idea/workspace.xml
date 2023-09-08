@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v5">
+    <list default="true" id="fa7e768e-c8ab-4137-9764-cca3cd2ac08b" name="变更" comment="v6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/dto/StatusDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/pojo/Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/main/java/com/crud/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-management/src/test/java/ManagementTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +243,7 @@
       <workItem from="1693987675608" duration="2277000" />
       <workItem from="1694093329729" duration="398000" />
       <workItem from="1694093732077" duration="1716000" />
-      <workItem from="1694153877237" duration="3444000" />
+      <workItem from="1694153877237" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1690248458726</created>
@@ -281,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694093383433</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v6">
+      <created>1694158608628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694158608628</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +309,8 @@
     <MESSAGE value="v3" />
     <MESSAGE value="v4" />
     <MESSAGE value="v5" />
-    <option name="LAST_COMMIT_MESSAGE" value="v5" />
+    <MESSAGE value="v6" />
+    <option name="LAST_COMMIT_MESSAGE" value="v6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

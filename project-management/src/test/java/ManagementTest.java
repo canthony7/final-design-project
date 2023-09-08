@@ -107,4 +107,13 @@ public class ManagementTest {
         System.out.println(data.toString());
     }
 
+    @Test
+    void Test09(){
+        Optional<Project> optionalProject = projectRepository.findById(19L);
+        if (optionalProject.isPresent()){
+            Project project = optionalProject.get();
+            System.out.println();
+        }
+    }
+
 }

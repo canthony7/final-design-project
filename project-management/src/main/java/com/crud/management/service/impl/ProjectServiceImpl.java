@@ -88,18 +88,41 @@ public class ProjectServiceImpl implements ProjectService {
     public ResponseBean updateProjectStatus(StatusDto statusDto) {
         Long projectId = statusDto.getId();
         String status = statusDto.getStatus();
-        Optional<Dealer> optionalDealer = dealerRepository.findById(statusDto.getDealerId());
-        Dealer dealer = optionalDealer.get();
-        Double feeRate = dealer.getFeeRate();
         Optional<Project> optionalProject = projectRepository.findById(projectId);
+
+//        if (statusDto.getDealerId() != null){
+//            Optional<Dealer> optionalDealer = dealerRepository.findById(statusDto.getDealerId());
+//            dealer = optionalDealer.get();
+//            feeRate = dealer.getFeeRate();
+//        }
+
         // 如果有这个项目
         if (optionalProject.isPresent()){
             Project project = optionalProject.get();
             project.setStatus(status);
-            if (status.equals("已完成")){
+            project.setFinishedTime(DateUtils.getNowLocalDate());
+            // 如果dealer为null就不用更新费率了
+//            if (status.equals("已完成") && dealer != null){
+//                // 更新代理的费率
+//                dealer.setFeeRate(feeRate + 0.01D);
+//                dealerRepository.save(dealer);
+//            }
+
+            // 看项目是否有dealerid，如果存在则说明有代理，要更新代理费率
+            Dealer dealer = project.getDealer();
+            Optional<Dealer> optionalDealer = Optional.empty();
+            if (dealer != null){
+                optionalDealer = dealerRepository.findById(project.getDealer().getId());
+            }
+
+            if (optionalDealer.isPresent()){
+                dealer = optionalDealer.get();
+                Double feeRate = dealer.getFeeRate();
+                if (status.equals("已完成")){
                 // 更新代理的费率
-                dealer.setFeeRate(feeRate + 0.01D);
-                dealerRepository.save(dealer);
+                    dealer.setFeeRate(feeRate + 0.01D);
+                    dealerRepository.save(dealer);
+                }
             }
             projectRepository.save(project);
             return ResponseBean.success();

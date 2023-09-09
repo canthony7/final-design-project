@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 @Service
 public class FeeServiceImpl implements FeeService {
 
+
     @Resource
     FeeRepository feeRepository;
 
@@ -29,7 +30,8 @@ public class FeeServiceImpl implements FeeService {
     public ResponseBean findFeeByMonth(String feeType, LocalDate startDate, LocalDate endDate) {
         // 如果类型为空，返回错误
         if (feeType == null){
-            return ResponseBean.fail(ResponseEnum.FIND_ERROR);
+//            return ResponseBean.fail(ResponseEnum.FIND_ERROR);
+            return findAll(startDate, endDate);
         }
         // 如果起始日期或结束日期为空，则根据类型查询
         if (startDate == null || endDate == null){
@@ -55,7 +57,7 @@ public class FeeServiceImpl implements FeeService {
         return ResponseBean.success(listWithoutDuplicates, listWithoutDuplicates.size());
     }
 
-    // 查询所有的列表和总盈利
+    // 查询所有的列表和总盈利。不再使用
     @Override
     public ResponseBean findAll(LocalDate startDate, LocalDate endDate) {
         Map<String, Object> resultMap;
@@ -121,6 +123,10 @@ public class FeeServiceImpl implements FeeService {
 
     @Override
     public ResponseBean insertFee(FeeDto feeDto) {
+        String feeType = feeDto.getFeeType();
+        if (feeType.equals("人工费") || feeType.equals("代理费")){
+            return ResponseBean.fail(ResponseEnum.INSERT_TYPE_ERROR);
+        }
         Fee fee = new Fee();
         fee.setFeeType(feeDto.getFeeType());
         fee.setFee(feeDto.getFee());
@@ -142,14 +148,15 @@ public class FeeServiceImpl implements FeeService {
         functionFee.setFeeType(feeDto.getFeeType());
         functionFee.setProject(optionalProject.get());
         functionFee.setCreateTime(DateUtils.getNowLocalDate());
+        functionFee.setFee(feeDto.getFee());
         feeRepository.save(functionFee);
 
         // 2 插入代理费用
-        Fee dealerFee = new Fee();
-        functionFee.setFeeType("代理费");
-        functionFee.setProject(optionalProject.get());
-        functionFee.setCreateTime(DateUtils.getNowLocalDate());
-        feeRepository.save(functionFee);
+//        Fee dealerFee = new Fee();
+//        functionFee.setFeeType("代理费");
+//        functionFee.setProject(optionalProject.get());
+//        functionFee.setCreateTime(DateUtils.getNowLocalDate());
+//        feeRepository.save(functionFee);
         return ResponseBean.success();
     }
 

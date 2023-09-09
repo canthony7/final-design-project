@@ -21,7 +21,9 @@ public enum ResponseEnum {
 
     DELETE_ERROR(415, "删除失败"),
 
-    REQUEST_FORBID_ERROR(4003, "您没有访问该资源的权限");
+    REQUEST_FORBID_ERROR(4003, "您没有访问该资源的权限"),
+
+    INSERT_TYPE_ERROR(4004, "没有携带projectId，无法插入人工费或代理费");
 
     private final Integer code;
     private final String message;

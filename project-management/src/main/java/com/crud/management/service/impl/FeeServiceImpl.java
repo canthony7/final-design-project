@@ -28,7 +28,7 @@ public class FeeServiceImpl implements FeeService {
 
     @Override
     public ResponseBean findFeeByMonth(String feeType, LocalDate startDate, LocalDate endDate) {
-        // 如果类型为空，返回错误
+        // 如果类型为空，返回所有类型
         if (feeType == null){
 //            return ResponseBean.fail(ResponseEnum.FIND_ERROR);
             return findAll(startDate, endDate);
@@ -36,12 +36,14 @@ public class FeeServiceImpl implements FeeService {
         // 如果起始日期或结束日期为空，则根据类型查询
         if (startDate == null || endDate == null){
             List<Fee> feeList = feeRepository.findByFeeType(feeType);
-            Map<String, Object> map = TotalFeeAndList(feeList);
+//            Map<String, Object> map = TotalFeeAndList(feeList);
+            Map<String, Object> map = TotalIncomeAndList(feeList);
             return ResponseBean.success(map, feeList.size());
         }
         // 如果两个日期都不为空，则根据日期和类型查询
         List<Fee> feeList = feeRepository.findByFeeTypeAndCreateTimeBetween(feeType, startDate, endDate);
-        Map<String, Object> map = TotalFeeAndList(feeList);
+//        Map<String, Object> map = TotalFeeAndList(feeList);
+        Map<String, Object> map = TotalIncomeAndList(feeList);
         return ResponseBean.success(map, feeList.size());
     }
 
@@ -63,7 +65,6 @@ public class FeeServiceImpl implements FeeService {
         Map<String, Object> resultMap;
         List<Fee> feeList;
         //1. 如果起始时间和结束时间为空，则直接返回所有数据，并计算总收入
-
         if (startDate == null || endDate == null){
             feeList = feeRepository.findAll();
         } else {
